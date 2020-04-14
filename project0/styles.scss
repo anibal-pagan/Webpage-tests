@@ -1,0 +1,95 @@
+$unselected: #6417e8;
+$selected: #8a61f2;
+$pad: 15px;
+$textcolor: white;
+
+%toptext {
+    color: $textcolor;
+    background-color: $unselected;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.heading {
+    div {
+        padding: $pad;
+        text-align: center;
+    }
+}
+
+#aboutme:hover, #myart:hover, #mystudies:hover, #mypasstime:hover {
+    background-color: $selected;
+}
+
+#name {
+    @extend %toptext;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+a, a:hover {
+    @extend %toptext;
+    font-size: 24px;
+}
+
+body {
+    background-color: #efecff;
+}
+
+.container {
+    background-color: #b3a5fc;
+    min-height: 90vh;
+}
+
+.middle-text {
+    color: $textcolor;
+    text-align: justify;
+}
+
+h1, h5 {
+    padding: 1%;
+    color: $textcolor;
+    text-align: center;
+}
+
+p {
+    text-indent: 50px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+@media (min-width: 550px) {
+    .painting-header::before {
+        content: "Visual Arts: Painting.";
+    }
+    .drawing-header::before {
+        content: "Visual Arts: Drawing.";
+    }
+}
+
+@media (max-width: 549px) {
+    .painting-header::before {
+        content: "Painting";
+    }
+    .drawing-header::before {
+        content: "Drawing";
+    }
+}
+
+table {
+    border: 2px solid $textcolor;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: $textcolor;
+}
+
+th, td {
+    border: 1px solid $textcolor;
+    padding: 5px;
+    text-align: center;
+}
+
+ul {
+    color:$textcolor;
+}
